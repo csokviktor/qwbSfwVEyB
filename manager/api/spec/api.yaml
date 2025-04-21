@@ -1,0 +1,431 @@
+openapi: 3.0.1
+info:
+  title: Library manager API
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080
+paths:
+  /v1/authors:
+    post:
+      summary: Create Author
+      tags:
+        - Authors
+      operationId: CreateAuthor
+      security: [] # no authentication
+      requestBody:
+        description: Author data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateAuthor"
+      responses:
+        "201":
+          description: Author created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Author"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+    get:
+      summary: Get Authors
+      tags:
+        - Authors
+      operationId: GetAuthors
+      security: [] # no authentication
+      responses:
+        "200":
+          description: Authors found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Author"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+  /v1/authors/{id}:
+    get:
+      summary: Get Author
+      tags:
+        - Authors
+      operationId: GetAuthor
+      security: [] # no authentication
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID of the Author
+      responses:
+        "200":
+          description: Author found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Author"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+  /v1/borrowers:
+    post:
+      summary: Crate Borrower
+      tags:
+        - Borrowers
+      operationId: CreateBorrower
+      security: [] # no authentication
+      requestBody:
+        description: Borrower data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateBorrower"
+      responses:
+        "201":
+          description: Borrower created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Borrower"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+    get:
+      summary: Get Borrowers
+      tags:
+        - Borrowers
+      operationId: GetBorrowers
+      security: [] # no authentication
+      responses:
+        "200":
+          description: Author found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Borrower"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+  /v1/borrowers/{id}:
+    get:
+      summary: Get Borrower
+      tags:
+        - Borrowers
+      operationId: GetBorrower
+      security: [] # no authentication
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID of the Borrower
+      responses:
+        "200":
+          description: Borrower found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Borrower"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+  /v1/borrowers/{id}/books:
+    get:
+      summary: Get Borrower books
+      tags:
+        - Borrowers
+      operationId: GetBorrowerBooks
+      security: [] # no authentication
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID of the Book
+      responses:
+        "200":
+          description: Borrower books found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Book"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+  /v1/books:
+    post:
+      summary: Create Book
+      tags:
+        - Books
+      operationId: CreateBook
+      security: [] # no authentication
+      requestBody:
+        description: Book data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateBook"
+      responses:
+        "201":
+          description: Book created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Book"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+    get:
+      summary: Get Books
+      tags:
+        - Books
+      operationId: GetBooks
+      security: [] # no authentication
+      responses:
+        "200":
+          description: Books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Book"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+  /v1/books/{id}/borrow:
+    post:
+      summary: Borrow a book
+      tags:
+        - Books
+      operationId: BorrowBook
+      security: [] # no authentication
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID of the Book
+      requestBody:
+        description: Book data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BorrowBook"
+      responses:
+        "201":
+          description: Book borrowed
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+
+components:
+  schemas:
+    CreateAuthor:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+        - name
+    
+    CreateBorrower:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+        - name
+    
+    Author:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        books:
+          type: array
+          items:
+            $ref: "#/components/schemas/Book"
+      required:
+        - id
+        - books
+      allOf:
+        - $ref: "#/components/schemas/CreateAuthor"
+    
+    Borrower:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        books:
+          type: array
+          items:
+            $ref: "#/components/schemas/Book"
+      required:
+        - id
+        - books
+      allOf:
+        - $ref: "#/components/schemas/CreateBorrower"
+    
+    CreateBook:
+      type: object
+      properties:
+        title:
+          type: string
+        authorID:
+          type: string
+          format: uuid
+      required:
+        - title
+        - authorID
+    
+    Book:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        borrowerID:
+          type: string
+          format: uuid
+      required:
+        - id
+      allOf:
+        - $ref: "#/components/schemas/CreateBook"
+    
+    BorrowBook:
+      type: object
+      properties:
+        borrowerID:
+          type: string
+          format: uuid
+      required:
+        - borrowerID
+    
+    APIError:
+      type: object
+      properties:
+        error:
+          type: string

@@ -1,0 +1,29 @@
+version: "3"
+
+volumes:
+  database: {}
+
+networks:
+  applications:
+    external: false
+    name: applications
+
+services:
+  manager:
+    image: lib_manager/manager:0.0.1
+    container_name: manager
+    restart: always
+    volumes:
+      - "database:/app"
+    networks:
+      - applications
+    ports:
+      - "8080:8080"
+
+  integration:
+    image: lib_manager/integration:0.0.1
+    container_name: integration
+    networks:
+      - applications
+    depends_on:
+      - manager
