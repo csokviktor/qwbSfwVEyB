@@ -6,12 +6,12 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/csokviktor/lib_manager/internal/repository"
-	"github.com/csokviktor/lib_manager/internal/repository/dbmodels"
-	repository_mocks "github.com/csokviktor/lib_manager/internal/repository/mocks"
-	"github.com/csokviktor/lib_manager/internal/service"
-	service_mocks "github.com/csokviktor/lib_manager/internal/service/mocks"
-	"github.com/csokviktor/lib_manager/internal/util"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
+	repository_mocks "github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/mocks"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/service"
+	service_mocks "github.com/csokviktor/qwbSfwVEyB/manager/internal/service/mocks"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/util"
 	"go.uber.org/mock/gomock"
 )
 

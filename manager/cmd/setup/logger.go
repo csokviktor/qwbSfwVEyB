@@ -3,7 +3,7 @@ package setup
 import (
 	"os"
 
-	"github.com/csokviktor/lib_manager/cmd/config"
+	"github.com/csokviktor/qwbSfwVEyB/manager/cmd/config"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )

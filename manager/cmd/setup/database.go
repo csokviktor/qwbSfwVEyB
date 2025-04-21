@@ -7,8 +7,8 @@ import (
 
 	"github.com/amacneil/dbmate/v2/pkg/dbmate"
 	_ "github.com/amacneil/dbmate/v2/pkg/driver/sqlite"
-	"github.com/csokviktor/lib_manager/cmd/config"
-	dbmigration "github.com/csokviktor/lib_manager/db-migrations"
+	"github.com/csokviktor/qwbSfwVEyB/manager/cmd/config"
+	dbmigration "github.com/csokviktor/qwbSfwVEyB/manager/db-migrations"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

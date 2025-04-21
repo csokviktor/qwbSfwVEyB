@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	"github.com/csokviktor/lib_manager/internal/repository"
-	"github.com/csokviktor/lib_manager/internal/repository/dbmodels"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
 )
 
 type authors struct {

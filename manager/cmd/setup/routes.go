@@ -1,10 +1,10 @@
 package setup
 
 import (
-	"github.com/csokviktor/lib_manager/internal/api/authors"
-	"github.com/csokviktor/lib_manager/internal/api/books"
-	"github.com/csokviktor/lib_manager/internal/api/borrowers"
-	"github.com/csokviktor/lib_manager/internal/service"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/api/authors"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/api/books"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/api/borrowers"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/service"
 	"github.com/gin-gonic/gin"
 )
 

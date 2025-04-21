@@ -13,7 +13,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	dbmodels "github.com/csokviktor/lib_manager/internal/repository/dbmodels"
+	dbmodels "github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
 	gomock "go.uber.org/mock/gomock"
 )
 

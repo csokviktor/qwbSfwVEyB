@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/csokviktor/lib_manager/cmd/setup"
+	"github.com/csokviktor/qwbSfwVEyB/manager/cmd/setup"
 	"github.com/rs/zerolog/log"
 )
 

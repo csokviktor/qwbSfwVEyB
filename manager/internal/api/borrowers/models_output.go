@@ -1,8 +1,8 @@
 package borrowers
 
 import (
-	"github.com/csokviktor/lib_manager/internal/api/books"
-	"github.com/csokviktor/lib_manager/internal/repository/dbmodels"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/api/books"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
 )
 
 type APIBorrower struct {

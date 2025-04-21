@@ -1,7 +1,7 @@
 package setup
 
 import (
-	"github.com/csokviktor/lib_manager/cmd/config"
+	"github.com/csokviktor/qwbSfwVEyB/manager/cmd/config"
 	"github.com/kelseyhightower/envconfig"
 )
 

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/csokviktor/lib_manager/internal/api"
-	"github.com/csokviktor/lib_manager/internal/repository"
-	"github.com/csokviktor/lib_manager/internal/service"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/api"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/service"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"github.com/rs/zerolog/log"

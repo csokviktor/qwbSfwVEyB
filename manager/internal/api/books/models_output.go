@@ -1,6 +1,6 @@
 package books
 
-import "github.com/csokviktor/lib_manager/internal/repository/dbmodels"
+import "github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
 
 type APIBook struct {
 	ID         string  `json:"id"`

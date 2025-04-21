@@ -1,7 +1,7 @@
 package authors
 
 import (
-	"github.com/csokviktor/lib_manager/internal/repository/dbmodels"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
 	"github.com/gin-gonic/gin"
 )
 

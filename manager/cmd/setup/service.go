@@ -1,8 +1,8 @@
 package setup
 
 import (
-	"github.com/csokviktor/lib_manager/internal/repository"
-	"github.com/csokviktor/lib_manager/internal/service"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/service"
 	"gorm.io/gorm"
 )
 

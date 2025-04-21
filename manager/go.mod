@@ -1,4 +1,4 @@
-module github.com/csokviktor/lib_manager
+module github.com/csokviktor/qwbSfwVEyB/manager
 
 go 1.24.2
 

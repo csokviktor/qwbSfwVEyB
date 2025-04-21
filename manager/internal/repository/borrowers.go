@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/csokviktor/lib_manager/internal/repository/dbmodels"
+	"github.com/csokviktor/qwbSfwVEyB/manager/internal/repository/dbmodels"
 	"gorm.io/gorm"
 )
 
