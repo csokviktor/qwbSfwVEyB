@@ -40,7 +40,9 @@ If you do not have `docker-compose` you can run it using only `make`.
 #### Run everything with one command
 
 ```sh
-make run-all
+cd deployment
+make build   # Build all Docker images
+make run-all # Start services and execute test suite
 ```
 
 #### Run individual components
@@ -55,7 +57,8 @@ make integration # Start the integration service
 #### Stop and remove everything
 
 ```sh
-make clean
+make compose-down # If it was started with compose-up
+make clean # If it was started with run-all
 ```
 
 ### 3. Development Workflows
